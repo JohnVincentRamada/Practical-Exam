@@ -18,32 +18,39 @@ class rawr {
 		double tax_deduction = 0;
 		double annual_tax = 0;
 
-		if ((annual_salary >= 250000) && (annual_salary <= 400000))	{
+		if ((annual_salary >= 0) && (annual_salary <= 250000)) {
+			tax = annual_salary-0;
+			tax_deduction = tax * .0;
+			annual_tax = tax_deduction;
+			System.out.println("your Annual tax is 	:		" + String.format("%.2f", annual_tax));
+		}
+
+		else if ((annual_salary >= 250000) && (annual_salary <= 400000))	{
 			tax = annual_salary-250000;
 			tax_deduction = tax * .20;
 			annual_tax = tax_deduction;
 			System.out.println("your Annual tax is 	:		" + String.format("%.2f", annual_tax));
 		}
 		else if ((annual_salary >= 400000) && (annual_salary <= 800000))	{
-			tax = annual_salary-400000;
+			tax = annual_salary-30000-400000;
 			tax_deduction = tax * .25 + 30000;
 			annual_tax = tax_deduction;
 			System.out.println("your Annual tax is 	:		" + String.format("%.2f", annual_tax));
 		}
 		else if ((annual_salary >= 800000) && (annual_salary <= 2000000))	{
-			tax = annual_salary-800000;
+			tax = annual_salary-130000-800000;
 			tax_deduction = tax * .30 + 130000;
 			annual_tax = tax_deduction;
 			System.out.println("your Annual tax is 	:		" + String.format("%.2f", annual_tax));
 		}
 		else if ((annual_salary >= 2000000) && (annual_salary <= 8000000))	{
-			tax = annual_salary-2000000;
+			tax = annual_salary-490000-2000000;
 			tax_deduction = tax * .32 + 490000;
 			annual_tax = tax_deduction;
 			System.out.println("your Annual tax is 	:		" + String.format("%.2f", annual_tax));
 		}
 		else if (annual_salary >= 8000000)	{
-			tax = annual_salary-8000000;
+			tax = annual_salary-2410000-8000000;
 			tax_deduction = tax * .35 + 2410000;
 			annual_tax = tax_deduction;
 			System.out.println("your Annual tax is 	:		" + String.format("%.2f", annual_tax));
